@@ -1,0 +1,13 @@
+flows:
+  default:
+    - log: "Hello!"
+  onPush:
+    - log: "Got ${event}"
+
+triggers:
+  - github:
+      version: 2
+      entryPoint: onPush
+      conditions:
+        type: "push"
+        branch: ".*"
