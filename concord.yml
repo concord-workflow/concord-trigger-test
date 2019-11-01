@@ -2,12 +2,13 @@ flows:
   default:
     - log: "Hello!"
   onPush:
-    - log: "Got: ${event}"
+    - log: "Commit ID: ${event.payload.after}"
 
 triggers:
   - github:
       version: 2
       entryPoint: onPush
+      useEventCommitId: true
       conditions:
         type: "push"
         branch: ".*"
