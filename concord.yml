@@ -2,7 +2,7 @@ flows:
   default:
     - log: "Hello!"
   onPush:
-    - log: "We got ${event}"
+    - log: "Got: ${event}"
 
 triggers:
   - github:
