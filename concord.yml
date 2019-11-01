@@ -6,8 +6,9 @@ flows:
 
 triggers:
   - github:
-      version: 1
+      version: 2
       entryPoint: onPush
       useEventCommitId: true
-      type: "push"
-      branch: ".*"
+      conditions:
+        type: "push"
+        branch: ".*"
