@@ -2,7 +2,7 @@ flows:
   default:
     - log: "Hello!"
   onPush:
-    - log: "Commit ID: ${event.payload.after}"
+    - log: "We got: ${event.payload.after}"
 
 triggers:
   - github:
